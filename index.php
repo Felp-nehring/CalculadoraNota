@@ -23,3 +23,8 @@
 </div>
 </body>
 </html>
+
+<?php
+include_once("conectar.php");
+
+?>
