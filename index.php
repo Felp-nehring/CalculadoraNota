@@ -18,17 +18,9 @@ include_once("conectar.php");
     ?>
     <div class="container">
         <hr>
-<h2 class="text-center text-light"> Calculadora de nota Bimestral</h2>
-        <hr>
-       <a href="bimestre_um.php"> <button class="btn btn-light"> 1º Bimestre </button> </a>
-       <a href="bimestre_dois.php"> <button class="btn btn-light"> 2º Bimestre </button> </a>
-       <a href="bimestre_tres.php"> <button class="btn btn-light"> 3º Bimestre </button> </a>
-       <a href="bimestre_quatro.php"> <button class="btn btn-light"> 4º Bimestre </button> </a>
-       <a href="bimestre.php"> <button class="btn btn-light"> Todos os Bimestres </button> </a>
 
-    <?php 
-    include ("bimestre.php")
-    ?>
+
+  
 </div>
 </body>
 </html>

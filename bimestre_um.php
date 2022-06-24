@@ -1,6 +1,3 @@
-<?php
-include_once("conectar.php");
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -26,7 +23,7 @@ include_once("conectar.php");
        <a href="bimestre_quatro.php" class="btn btn-light ms-2">  4º Bimestre  </a>
        <a href="bimestre.php" class="btn btn-light ms-3"> Todos os Bimestres </a>
        <hr>
-       <form>
+       <form enctype="multipart/form-data" method="POST" >
             <div class="row">
             <div class="col">
       
@@ -40,51 +37,51 @@ include_once("conectar.php");
               <tbody>
                 <tr>
                 <th scope="row">Matemática</th>
-                <th scope="row"><input type="number" name="b1" id="" min="0" max="10" step=".5" ></th>
+                <th scope="row"><input type="number" name="mat" id="" min="0" max="10" step=".5" ></th>
                 </tr>
                 <tr>
                 <th scope="row">Português</th>
-                <th scope="row"><input type="number" name="b1" id="" min="0" max="10" step=".5" ></th>
+                <th scope="row"><input type="number" name="port" id="" min="0" max="10" step=".5" ></th>
                 </tr>
                 <tr>
                 <th scope="row">História</th>
-                <th scope="row"><input type="number" name="b1" id="" min="0" max="10" step=".5" ></th>
+                <th scope="row"><input type="number" name="hist" id="" min="0" max="10" step=".5" ></th>
                 </tr>
                 <tr>
                 <th scope="row">Geografia</th>
-                <th scope="row"><input type="number" name="b1" id="" min="0" max="10" step=".5" ></th>
+                <th scope="row"><input type="number" name="geo" id="" min="0" max="10" step=".5" ></th>
                 </tr>
                 <tr>
                 <th scope="row">Filosofia</th>
-                <th scope="row"><input type="number" name="b1" id="" min="0" max="10" step=".5" ></th>
+                <th scope="row"><input type="number" name="filo" id="" min="0" max="10" step=".5" ></th>
                 </tr>
                 <tr>
                 <th scope="row">Sociologia</th>
-                <th scope="row"><input type="number" name="b1" id="" min="0" max="10" step=".5" ></th>
+                <th scope="row"><input type="number" name="socio" id="" min="0" max="10" step=".5" ></th>
                 </tr>
                 <tr>
                 <th scope="row">Literatura</th> 
-                <th scope="row"><input type="number" name="b1" id="" min="0" max="10" step=".5" ></th>
+                <th scope="row"><input type="number" name="lit" id="" min="0" max="10" step=".5" ></th>
                 </tr>
                 <tr>
                 <th scope="row">Lingua Inglesa</th>
-                <th scope="row"><input type="number" name="b1" id="" min="0" max="10" step=".5" ></th>
+                <th scope="row"><input type="number" name="ing" id="" min="0" max="10" step=".5" ></th>
                 </tr>
                 <tr>
                 <th scope="row">Biologia</th>
-                <th scope="row"><input type="number" name="b1" id="" min="0" max="10" step=".5" ></th>
+                <th scope="row"><input type="number" name="bio" id="" min="0" max="10" step=".5" ></th>
                 </tr>
                 <tr>
                 <th scope="row">Química</th>
-                <th scope="row"><input type="number" name="b1" id="" min="0" max="10" step=".5" ></th>
+                <th scope="row"><input type="number" name="qui" id="" min="0" max="10" step=".5" ></th>
                 </tr>
                 <tr>
                 <th scope="row">Física</th>
-                <th scope="row"><input type="number" name="b1" id="" min="0" max="10" step=".5" ></th>
+                <th scope="row"><input type="number" name="fisi" id="" min="0" max="10" step=".5" ></th>
                 </tr>
                 <tr>
                 <th scope="row">Artes</th>
-                <th scope="row"><input type="number" name="b1" id="" min="0" max="10" step=".5" "></th>
+                <th scope="row"><input type="number" name="art" id="" min="0" max="10" step=".5" "></th>
                 </tr>
                
               </tbody>
@@ -98,3 +95,31 @@ include_once("conectar.php");
             
 
             <hr class="mt-2">
+
+            <?php
+if($_POST){
+  include_once("conectar.php");
+    $matematica = $_POST['mat'];
+    $portugues = $_POST['port'];
+    $geografia = $_POST['geo'];
+    $historia = $_POST['hist'];
+    $literatura = $_POST['lit'];
+    $filosofia = $_POST['filo'];
+    $sociologia = $_POST['socio'];
+    $ingles = $_POST['ing'];
+    $biologia = $_POST['bio'];
+    $quimica = $_POST['qui'];
+    $fisica = $_POST['fisi'];
+    $artes = $_POST['art'];
+
+$sql = "insert into b_um (nota_mat,nota_port,nota_geo,nota_hist,
+nota_lit,nota_filo,nota_socio,nota_ing,nota_bio,nota_qui,nota_fisi,nota_art) values 
+('$matematica','$portugues','$geografia','$historia','$literatura','$filosofia','$sociologia',
+'$ingles','$biologia','$quimica','$fisica','$artes',)";
+
+
+}
+
+  $mysqli = $mysqli->close();
+
+?>

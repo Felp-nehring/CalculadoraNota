@@ -9,14 +9,14 @@
           <a class="nav-link active mt-3 me-3 text-light fw-bold " aria-current="page" href="bimestre.php"> Bimestre</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active mt-3 me-4 text-light fw-bold " href="trimestre.php">Trimestre</a>
+          <a class="nav-link active mt-3 me-4 text-light fw-bold disabled" href="trimestre.php">Trimestre</a>
         </li>
-        <a class="navbar-brand" href=""><img src="img/logo.png" alt="logo" class="logo"></a>
+        <a class="navbar-brand" href="index.php"><img src="img/logo.png" alt="logo" class="logo"></a>
         <li class="nav-item">
-          <a class="nav-link active mt-3 ms-2 text-light fw-bold " href="semestre.php">Semestre</a>
+          <a class="nav-link active mt-3 ms-2 text-light fw-bold disabled" href="semestre.php">Semestre</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link  active mt-3 ms-3 text-light fw-bold " href="more.php">Mais Informações</a>
+          <a class="nav-link  active mt-3 ms-3 text-light fw-bold disabled  " href="more.php">Mais Informações</a>
         </li>
       </ul>
     </div>
