@@ -11,7 +11,7 @@ include_once("conectar.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora Nota</title>
 </head>
-<body>
+<body style="text-align:center;">  
   
     <?php 
     include ("navbar.php")
@@ -20,6 +20,12 @@ include_once("conectar.php");
         <hr>
 <h2 class="text-center text-light"> Calculadora de nota Bimestral</h2>
         <hr>
+       <a href="bimestre_um.php"> <button class="btn btn-light"> 1º Bimestre </button> </a>
+       <a href="bimestre_dois.php"> <button class="btn btn-light"> 2º Bimestre </button> </a>
+       <a href="bimestre_tres.php"> <button class="btn btn-light"> 3º Bimestre </button> </a>
+       <a href="bimestre_quatro.php"> <button class="btn btn-light"> 4º Bimestre </button> </a>
+       <a href="bimestre.php"> <button class="btn btn-light"> Todos os Bimestres </button> </a>
+
     <?php 
     include ("bimestre.php")
     ?>
